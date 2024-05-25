@@ -33,7 +33,7 @@
 
 <h3>Index</h3>
 <img src="readme/index_image.png">
-<p>Each of the cards use the same image included in each of the exercise. A green button is used to link each of the cards to the corresponing exercises. All cards are responsive.</p>
+<p>Each of the cards use the same image included in each of the exercise. A green button is used to link each of the cards to the corresponding exercises. All cards are responsive.</p>
 <h3>Ejercises 2-9 (listadol.html)</h3>
 <p>A consistent colour palette is used for each of the exercises to blend in with the colours of the image used. Each of the forms is responsive.</p>
 <p></p>
