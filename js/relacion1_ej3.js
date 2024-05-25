@@ -5,19 +5,20 @@
 /*                                                    */ 
 /*              autora: Sandra Pirpamer               */
 /******************************************************/
-//document.getElementById("btn").addEventListener("click", calcular);
+
+document.getElementById("myform").addEventListener("submit", calcular);
 
 function calcular(){
-    
-    //1-captacion de datos
+    event.preventDefault()
+    //captacion de datos
 
     let lado1 = parseFloat(document.getElementById("numero1").value);
     let lado2 = parseFloat(document.getElementById("numero2").value);
     let lado3 = parseFloat(document.getElementById("numero3").value);
 
-    //2-cálculo 
+    //cálculo 
     let resultado;
-    // 3. Verificación de validez del triángulo
+    // Verificación de validez del triángulo
     if ((lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1)) {
         // Determinación del tipo de triángulo
         if (lado1 == lado2 && lado1 == lado3) {
@@ -29,7 +30,7 @@ function calcular(){
         }
     }    
 
-    //3. Display de resultados
+    //3. validacion y mostrar resultados
     if(isNaN(lado1)||isNaN(lado2)||isNaN(lado3)) {
         document.getElementById("resultado").innerHTML = "<span class='text-danger'>Error en la introducción de datos.</span>";
     }else{

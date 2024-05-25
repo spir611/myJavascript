@@ -6,30 +6,28 @@
 /******************************************************/
 
 
-//lo mismo que tenia en etiqueta form   onsubmit= "return diviEuclides()") en html, la ventaja es que html etiqueta mas limpia
-
-//document.getElementById("myform").addEventListener("submit", diviEuclides); //sin parentesis se lo invoca..no funciona pq no se ve resultado ya no funcion result false
+document.getElementById("myform").addEventListener("submit", diviEuclides); 
 
 function diviEuclides(){
-
+    event.preventDefault();
+    //datos y conversion de datos a integer
     let divi =parseInt(document.getElementById("dividendo").value);
     let disor =parseInt(document.getElementById("divisor").value);
     let cociente=0;
-    /**el resto es lo que queda en el monton despues del ultimo reparto */
-
-    while(divi >= disor){
-        divi -= disor;
-        cociente++;
-    }
+    
+    //validacion
     if(isNaN(divi) || isNaN(disor)){
         document.getElementById("resultado").innerHTML = "<span class='text-danger'>Error en la introducción de datos.</span>";
 
-    }else if(!isInteger(divi) || !isInteger(disor)){
-        document.getElementById("resultado").innerHTML = "<span class='text-danger'>Error. Solamente números enteros.</span>";
-
-
-    }else{    
-    document.getElementById("resultado").innerHTML="El cociente es: " + cociente + " y el resto es: " + divi;
+        }else{ 
+        //calculo
+        while(divi >= disor){
+            divi -= disor;
+            cociente++;
+        }
+        
+        //mostrar resultados
+        document.getElementById("resultado").innerHTML="El cociente es: " + cociente + " y el resto es: " + divi+".";
 
     
     }

@@ -9,26 +9,25 @@
 </head>
 <body>
     
-    <!-- aqui en form se pondra un id=myform para usar eventListener -->
     <div class="container">
     
-        <form class="col-xs-12 col-md-8  col-lg-6 mx-auto border border-beige p-5 mt-5" onsubmit="return diviEuclides()"> 
+        <form id=myform class="col-xs-12 col-md-8  col-lg-6 mx-auto border border-beige p-5 mt-5"> 
             <div class="text-center mb-5">
                 <img class="img-fluid d-block mx-auto" src="./img/algoritmo de euclides.jpg">
             </div>
             <h1 class="text-center  mb-2 text-beige">División por Euclides</h1> 
             <h3 class="text-center mt-2 mb-4">Introducción de datos</h3> 
-        <div class="mb-3">
-            <label for="dividendo" class="form-label text-beige">Dividendo:</label>
-            <input type="text" class="form-control border border-beige " id="dividendo"  placeholder="Solo numeros enteros">
-        </div>
-        <div class="mb-3">
-            <label for="divisor" class="form-label text-beige">Divisor</label>
-            <input type="text" class="form-control border border-beige" id="divisor">
-        </div>
+            <div class="mb-3">
+                <label for="dividendo" class="form-label text-beige">Dividendo:</label>
+                <input type="text" class="form-control border border-beige " id="dividendo"  placeholder="Solo numeros enteros">
+            </div>
+            <div class="mb-3">
+                <label for="divisor" class="form-label text-beige">Divisor</label>
+                <input type="text" class="form-control border border-beige" id="divisor">
+            </div>
         
-        <button class="btn btn-beige text-white">Calcular</button>
-        <p id="resultado" class="mt-3"></p>
+            <button class="btn btn-beige text-white">Calcular</button>
+            <p id="resultado" class="mt-3"></p>
         </form>
         <div class="text-center">
             <a class="d-block mx-auto mt-2" href="./index.html">Volver al Índice</a>

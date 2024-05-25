@@ -5,23 +5,27 @@
 /*              autora: Sandra Pirpamer               */
 /******************************************************/
   
-//document.getElementById("btn").addEventListener("click", calcular);
+document.getElementById("myform").addEventListener("submit", calculoLetra);
 
 /**
  * funcion para calcular la letra del dni
  * @returns false
  */
 function calculoLetra(){
-    const LETRA = "TRWAGMYFPDXBNJZSQVHLCKE"  //posicion 0 a 21
+    event.preventDefault()
+
+    const LETRA = "TRWAGMYFPDXBNJZSQVHLCKE"  
+    //captar datos
     let dni = parseInt(document.getElementById("dni").value);
     let dniRegex = /^[0-9]{7,8}$/;
 
-    // Verificar si el valor del DNI es un número y cumple con el formato
+    //validacion
     if (!isNaN(dni) && dniRegex.test(dni)) {
+        //calculos
         let resto = dni % 23;
         document.getElementById("resultado").innerHTML = "La letra es : " + LETRA[resto];
     } else {
-        // Si el valor del DNI no es un número válido o no cumple con el formato
+        //mostrar resultados
         document.getElementById("resultado").innerHTML = "Por favor, introduce un DNI válido (8 números).";
     }
     return false; 
